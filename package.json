@@ -1,0 +1,29 @@
+{
+  "name": "ourteammates-api",
+  "version": "1.0.0",
+  "description": "back-end for ourteammate system",
+  "main": "index.js",
+  "scripts": {
+    "stop": "pm2 kill",
+    "dev": "pm2-dev start index.js",
+    "start": "pm2 start index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "hieunt142",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.7.11",
+    "mongoose-seed": "^0.6.0",
+    "multer": "^1.4.2",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "pm2": "^4.1.2",
+    "response-format": "^1.2.0",
+    "validator": "^12.0.0"
+  }
+}
