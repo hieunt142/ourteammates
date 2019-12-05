@@ -79,6 +79,14 @@ const memberSchema = mongoose.Schema({
   }
 });
 
+memberSchema.pre("save", function(next) {
+  if (this.password && this.isModified("password")) {
+    this.password = this.generateHash(this.password);
+  }
+
+  next();
+});
+
 memberSchema.methods.generateHash = password => {
   let hashPwd = bcrypt.hashSync(password, salt);
 

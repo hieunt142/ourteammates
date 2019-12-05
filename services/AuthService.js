@@ -5,7 +5,6 @@ const CONFIG = require("../config");
 
 module.exports = {
   signIn: async authInfo => {
-    console.log(authInfo);
     const { email, password } = authInfo;
     let checkMember = await MemberService.getMemberByEmail(email);
     if (checkMember) {

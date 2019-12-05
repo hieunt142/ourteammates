@@ -5,7 +5,9 @@ const CONFIG = require("../config");
 const validator = require("./ValidatorService");
 
 async function getMemberByEmail(email) {
+  console.log("getMemberByEmail " + email);
   let member = await Member.findOne({ email: email });
+  console.log("get member " + member);
   if (member) return member;
   else return null;
 }
@@ -43,7 +45,7 @@ module.exports = {
           email: userInfo.email,
           password: userInfo.password
         });
-        newMember.password = newMember.generateHash(userInfo.password);
+        // newMember.password = newMember.generateHash(userInfo.password);
 
         await Member.create(newMember);
         let result = await Member.findOne({ email: newMember.email }).select(
