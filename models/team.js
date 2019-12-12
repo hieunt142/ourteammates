@@ -20,8 +20,7 @@ const teamSchema = mongoose.Schema({
   members: [
     {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "Member",
-      unique: true
+      ref: "Member"
     }
   ]
 });
