@@ -15,8 +15,7 @@ const teamSchema = mongoose.Schema({
   },
   leader: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: "Member",
-    unique: true
+    ref: "Member"
   },
   members: [
     {
